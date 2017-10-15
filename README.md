@@ -35,7 +35,7 @@ Start                      |  On Finish
 
 ### Credentials
 
-I obtained the server credentials by decompiling their android mobile app. They used Xamarin and with JetBrains dotPeek, it was easy to see the C# source code.
+The server credentials where obtained by decompiling their android mobile app. They used Xamarin and with JetBrains dotPeek, it was easy to see the C# source code.
 
 ### License
 MIT
