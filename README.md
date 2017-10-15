@@ -10,6 +10,13 @@ RTP show Brainstorm Resolver. This app gets the questions and the right answers 
 - `CLI`: The app can run as a console application.
 - `Messenger Bot`: This app can also respond to messenger bot webhooks. [Messenger Platform](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start)
 
+### Screens
+
+Start                      |  On Finish
+:-------------------------:|:-------------------------:
+![Screen 1](screens/1.png) |  ![Screen 2](screens/2.png)
+
+
 ### Requirements
 - `node` (using v8)
 - `yarn` (faster than npm)
