@@ -1,0 +1,62 @@
+{
+  "name": "brainstorm",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "tsc-watch --onSuccess \"npm run serve\"",
+    "console": "node build/ConsoleApp.js",
+    "serve": "node build/bin/server.js",
+    "build": "tsc",
+    "test": "jest",
+    "prettier": "prettier --parser typescript --single-quote --no-semi --write \"src/**/*.{ts,js,json}\"",
+    "precommit": "lint-staged",
+    "deploy-setup": "pm2 deploy ecosystem.config.js production setup",
+    "deploy": "pm2 deploy ecosystem.config.js production"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "prettier --parser typescript --single-quote --no-semi --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src/",
+      "<rootDir>/test/"
+    ],
+    "transform": {
+      ".ts$": "<rootDir>/node_modules/ts-jest/dist/preprocessor.js"
+    },
+    "cacheDirectory": "./jest-cache",
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "boxen": "^1.2.1",
+    "chump": "^1.2.0",
+    "express": "^4.15.4",
+    "log4js": "^2.3.3",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.4",
+    "@types/express": "^4.0.36",
+    "@types/jest": "^20.0.4",
+    "@types/node": "^8.0.14",
+    "@types/request": "^2.0.0",
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "lint-staged": "^4.0.2",
+    "prettier": "^1.5.3",
+    "ts-jest": "^20.0.10",
+    "tsc-watch": "^1.0.7",
+    "typescript": "^2.4.2"
+  }
+}
