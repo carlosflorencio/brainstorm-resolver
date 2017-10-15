@@ -33,5 +33,9 @@ Start                      |  On Finish
 - `yarn serve` - starts the api (`node build/server.js`)
 - `yarn prettier` - runs prettier to prettify the code (also runs before each commit)
 
+### Credentials
+
+I obtained the server credentials by decompiling their android mobile app. They used Xamarin and with JetBrains dotPeek, it was easy to see the C# source code.
+
 ### License
 MIT
